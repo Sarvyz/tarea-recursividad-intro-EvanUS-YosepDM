@@ -10,8 +10,3 @@ def sumar_digitos_aux(numero,res=0):
     else:
         res += numero % 10
         return sumar_digitos_aux((numero // 10), res)
-    
-print(sumar_digitos(1234))
-print(sumar_digitos(9001))
-print(sumar_digitos(7))
-print(sumar_digitos(0))

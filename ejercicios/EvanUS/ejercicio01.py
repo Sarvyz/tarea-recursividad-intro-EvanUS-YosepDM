@@ -1,2 +1,3 @@
 def sumar_digitos(numero):
-    return 0
+    if numero < 10:
+        return numero

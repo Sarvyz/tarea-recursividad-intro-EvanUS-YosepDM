@@ -26,7 +26,6 @@ def invertir_numero(numero):
 #R: Numero entero positivo dado por la funcion no auxiliar
 
 def invertir_numero_aux(numero,exp):
-    print(numero, exp)
     if numero == 0:
         return 0
     else:

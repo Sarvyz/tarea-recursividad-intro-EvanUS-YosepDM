@@ -1,23 +1,16 @@
 # Separar por paridad:
 #E: Numero
-#S: Eliminar impares auxiliar del numero dado
-#R: Solo numeros positivos enteros
+#S: Lista con un numero hecho con solo los numeros pares y otro numero hecho con solo los impares, realizado de manera recursiva de pila
+#R: Numero entero positivo
 
-def eliminar_impares(numero):
-    if isinstance(numero, int) and numero >= 0:
-        return eliminar_impares_aux(numero, 0)
-    else:
-        return 'Solo se admiten numeros enteros positivos o 0.'
-    
-# Separar por paridad auxiliar:
-#E: Numero, exponente (dado por la funcion no auxiliar como 0)
-#S: El numero sin los digitos impares o 0, realizado de manera recursiva de pila
-#R: Numero entero positivo dado por la funcion no auxiliar
-
-def eliminar_impares_aux(numero,exp):
+def separar_por_paridad(numero):
     if numero == 0:
-        return 0
-    elif (numero % 10) % 2 == 0:
-        return (numero % 10) * (10 ** exp) + eliminar_impares_aux(numero // 10, exp + 1)
+        return [0,0]
+    digito = numero % 10
+    pares = separar_por_paridad(numero // 10)
+    impares = separar_por_paridad(numero // 10)
+    if digito % 2 == 0:
+        pares = pares * 10 + digito
     else:
-        return eliminar_impares_aux(numero // 10, exp)
+        impares = impares * 10 + digito
+    return [pares, impares]

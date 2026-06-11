@@ -1,5 +1,5 @@
 #E: Lista
-#S: Lista de sublistas, sublistas con [elemento, # de apariciones]
+#S: Lista de sublistas, sublistas con [elemento, # de apariciones], sacado de manera recursiva de cola
 #R: Lista de numeros enteros
 
 def comprimir_repetidos(lista, n=0, apariciones=0, res=[],isfirst = True):

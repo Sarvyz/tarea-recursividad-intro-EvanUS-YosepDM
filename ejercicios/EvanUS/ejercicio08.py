@@ -1,5 +1,5 @@
 #E: Lista
-#S: Lista con secuencias de 3 elementos consecutivos en el que el elemento central sea menor que el anterior y posterior
+#S: Lista con secuencias de 3 elementos consecutivos en el que el elemento central sea menor que el anterior y posterior, sacado con recursividad de cola
 #R: Lista de solo enteros positivos
 
 def detectar_valles(lista, res = []):
